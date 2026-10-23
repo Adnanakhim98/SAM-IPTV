@@ -4,7 +4,7 @@ from datetime import datetime
 # ==============================
 # CONFIG
 # ==============================
-API_URL = "https://raw.githubusercontent.com/sm-monirulislam/Toffee-Auto-Update/refs/heads/main/toffee_data.json"
+API_URL = "https://raw.githubusercontent.com/Adnanakhim98/Toffee-Auto-Update/refs/heads/main/toffee_data.json"
 OUTPUT_FILE = "Toffee.m3u"
 
 # ==============================
