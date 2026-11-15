@@ -345,31 +345,9 @@
                 return false;
             }
         });
+        // Developer-tools detection removed: it could falsely redirect mobile browsers to about:blank.
 
-        function checkDevTools() {
-            const widthThreshold = window.outerWidth - window.innerWidth > 160;
-            const heightThreshold = window.outerHeight - window.innerHeight > 160;
-            
-            if (widthThreshold || heightThreshold) {
-                document.body.innerHTML = "<div style='background:black;height:100vh;display:flex;justify-content:center;align-items:center;'><h1 style='color:red;font-family:sans-serif;text-align:center;'>⛔ Security Alert: Developer Tools are blocked on this site!</h1></div>";
-                window.location.href = "about:blank";
-            }
-        }
-        setInterval(checkDevTools, 300);
-
-        (function() {
-            const devtools = /./;
-            devtools.toString = function() {
-                checkDevTools();
-                return '';
-            }
-            setInterval(function() {
-                console.log('%c', devtools);
-                console.clear();
-            }, 500);
-        })();
-
-        // ==========================================
+// ==========================================
         // PLAYER LOGIC
         // ==========================================
         const videoEl = document.getElementById('my-video');
